@@ -8,10 +8,8 @@ import {
 } from '@angular/common';
 
 @Component({
-  standalone: true,
-  imports: [
-    NgFor,
-  ],
+  //standalone: true,
+  //imports: [NgFor],
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
@@ -19,4 +17,8 @@ import {
 })
 export class HeroesComponent {
   heroes = HEROES;
+  selectedHero?: Hero;
+onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+}
 }
